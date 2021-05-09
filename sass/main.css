@@ -21,7 +21,7 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
-  background: #0dbfc5;
+  background: #fcc102;
 }
 
 nav a {
@@ -33,7 +33,7 @@ nav a {
 }
 
 .main-container {
-  background: #05f5f5;
+  background: #fcc102;
   min-height: 100vh;
   font-family: Montserrat, sans-serif;
 }
@@ -51,7 +51,6 @@ nav a {
 .main-container section h1 {
   color: #fcc102;
   font-size: 3rem;
-  opacity: 0;
 }
 
 .main-container section:target {
@@ -63,13 +62,7 @@ nav a {
   z-index: 10;
 }
 
-.main-container section:target h1 {
-  opacity: 0;
-  -webkit-animation: 2s fadeIn forwards 0.5s;
-          animation: 2s fadeIn forwards 0.5s;
-}
-
-.main-container section:target img {
+.main-container section:target .profile-container {
   opacity: 0;
   -webkit-animation: 2s fadeIn forwards 0.5s;
           animation: 2s fadeIn forwards 0.5s;
@@ -81,22 +74,14 @@ nav a {
           animation: 2s fadeIn forwards 0.7s;
 }
 
-.main-container section:target .img-background {
+.main-container section:target .work-container {
   opacity: 0;
   -webkit-animation: 2s fadeIn forwards 0.5s;
           animation: 2s fadeIn forwards 0.5s;
 }
 
-.main-container section:target .summery {
-  opacity: 0;
-  -webkit-animation: 2s fadeIn forwards 0.5s;
-          animation: 2s fadeIn forwards 0.5s;
-}
-
-.main-container section:target .skill-container {
-  opacity: 0;
-  -webkit-animation: 2s fadeIn forwards 0.5s;
-          animation: 2s fadeIn forwards 0.5s;
+.main-container #home {
+  background-color: #d1fff9;
 }
 
 .main-container #home .profile-container {
@@ -110,6 +95,7 @@ nav a {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 100px;
+  opacity: 0;
 }
 
 .main-container #home .profile-container .frame {
@@ -139,7 +125,6 @@ nav a {
   width: 400px;
   height: auto;
   z-index: 1;
-  opacity: 0;
 }
 
 .main-container #home .profile-container .information-container {
@@ -159,16 +144,57 @@ nav a {
 .main-container #home .profile-container .information-container .skill-container {
   font-size: 30px;
   padding: 10px 20px;
-  background: whitesmoke;
+  border: 1px solid #fcc102;
+  border-radius: 15px;
+  margin: 10px;
 }
 
 .main-container #home .profile-container .information-container .skill-container h3 {
-  font-family: 'Taviraj', serif;
+  font-family: "Taviraj", serif;
   color: #fcc102;
 }
 
 .main-container #work {
-  background: #0dbfc5;
+  background: #9cf5e1;
+}
+
+.main-container #work .work-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10vh;
+  opacity: 0;
+}
+
+.main-container #work .work-container h1 {
+  font-family: "Taviraj", serif;
+}
+
+.main-container #work .work-container .work-shelf-container {
+  width: 70vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-container #work .work-container .work-shelf-container .work-shelf {
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  background: #fcc102;
 }
 
 .main-container #contact {

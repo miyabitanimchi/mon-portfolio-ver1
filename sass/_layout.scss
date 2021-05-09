@@ -1,5 +1,5 @@
 .main-container {
-  background: #05f5f5;
+  background: $themeColor;
   min-height: 100vh;
   font-family: Montserrat, sans-serif;
 
@@ -13,9 +13,8 @@
     background: white;
   
     h1 {
-      color: rgb(252, 193, 2);
+      color: $themeColor;
       font-size: 3rem;
-      opacity: 0;
     }
 
     &:target {
@@ -27,38 +26,37 @@
       z-index: 10;
     }
 
-    &:target h1 {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.5s;
+    &:target .profile-container {
+      @include fadeInAnimation(0.5s);
     }
-    &:target img {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.5s;
-    }
+    // &:target img {
+    //   @include fadeInAnimation(0.5s);
+    // }
     &:target .frame {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.7s;
+      @include fadeInAnimation(0.7s);
     }
-    &:target .img-background {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.5s;
-    }
-    &:target .summery {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.5s;
-    }
-    &:target .skill-container {
-      opacity: 0;
-      animation: 2s fadeIn forwards 0.5s;
+    // &:target .img-background {
+    //   @include fadeInAnimation(0.5s);
+    // }
+    // &:target .summery {
+    //   @include fadeInAnimation(0.5s);
+    // }
+    // &:target .skill-container {
+    //   @include fadeInAnimation(0.5s);
+    // }
+    &:target .work-container {
+      @include fadeInAnimation(0.5s);
     }
   }
 
   #home {
+    background-color: rgb(209, 255, 249);
     .profile-container {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 100px;
+      opacity: 0;
 
       .frame {
         position: relative;
@@ -83,12 +81,12 @@
           width: 400px;
           height: auto;
           z-index: 1;
-          opacity: 0;
         }
       }
       
       .information-container {
         margin: 20px;
+
         h1 {
           font-family: 'Taviraj', serif;
         }
@@ -101,18 +99,48 @@
         .skill-container {
           font-size: 30px;
           padding: 10px 20px;
-          background: whitesmoke;
+          border: 1px solid $themeColor;
+          border-radius: 15px;
+          margin: 10px;
 
           h3 {
-            font-family: 'Taviraj', serif;
-            color: rgb(252, 193, 2)
+            font-family: $themeFontFamily;
+            color: $themeColor;
           }
         }
       }
     }
   }
   #work {
-      background: #0dbfc5;
+    background: rgb(156, 245, 225);
+
+    .work-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10vh;
+      opacity: 0;
+
+      h1 {
+        font-family: $themeFontFamily;
+      }
+
+      .work-shelf-container {
+        width: 70vw;
+        height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+
+        .work-shelf {
+          margin: auto;
+          width: 300px;
+          height: 200px;
+          background: $themeColor;
+        }
+      }
+      
+    }
   }
   #contact {
       background: #F2E527;
