@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background: #0dbfc5;
+}
+
+nav a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.main-container {
+  background: #191919;
+  min-height: 100vh;
+  font-family: Montserrat, sans-serif;
+}
+
+.main-container section {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  -webkit-transition: all ease-in .5s;
+  transition: all ease-in .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container section h1 {
+  color: #fcc102;
+  font-size: 50px;
+  opacity: 0;
+  position: absolute;
+}
+
+.main-container section:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.main-container section:target h1 {
+  opacity: 0;
+  -webkit-animation: 2s fadeIn forwards .5s;
+          animation: 2s fadeIn forwards .5s;
+}
+
+.main-container #home {
+  background: #ffffff;
+}
+
+.main-container #home .profile-container {
+  display: inline;
+}
+
+.main-container #home .profile-container img {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+  width: 25%;
+  z-index: 1;
+}
+
+.main-container #home .profile-container .img-background {
+  position: absolute;
+  background: #40edf3;
+  left: 18%;
+  top: 22%;
+  width: 25%;
+  height: 54%;
+  z-index: 0;
+}
+
+.main-container #home .profile-container h1 {
+  top: 10%;
+}
+
+.main-container #work {
+  background: #0dbfc5;
+}
+
+.main-container #contact {
+  background: #F2E527;
+}
+
+@-webkit-keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
