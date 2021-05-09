@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -74,8 +75,26 @@ nav a {
 
 .main-container section:target h1 {
   opacity: 0;
-  -webkit-animation: 2s fadeIn forwards .5s;
-          animation: 2s fadeIn forwards .5s;
+  -webkit-animation: 2s fadeIn forwards 0.5s;
+          animation: 2s fadeIn forwards 0.5s;
+}
+
+.main-container section:target img {
+  opacity: 0;
+  -webkit-animation: 2s fadeIn forwards 0.5s;
+          animation: 2s fadeIn forwards 0.5s;
+}
+
+.main-container section:target .img-background {
+  opacity: 0;
+  -webkit-animation: 2s fadeIn forwards 0.5s;
+          animation: 2s fadeIn forwards 0.5s;
+}
+
+.main-container section:target .summery {
+  opacity: 0;
+  -webkit-animation: 2s fadeIn forwards 0.5s;
+          animation: 2s fadeIn forwards 0.5s;
 }
 
 .main-container #home {
@@ -90,8 +109,10 @@ nav a {
   position: absolute;
   left: 20%;
   top: 25%;
-  width: 25%;
+  width: 300px;
+  height: auto;
   z-index: 1;
+  opacity: 0;
 }
 
 .main-container #home .profile-container .img-background {
@@ -99,13 +120,28 @@ nav a {
   background: #40edf3;
   left: 18%;
   top: 22%;
-  width: 25%;
-  height: 54%;
+  width: 300px;
+  height: 400px;
   z-index: 0;
+  opacity: 0;
 }
 
 .main-container #home .profile-container h1 {
-  top: 10%;
+  top: 15%;
+  font-family: 'Taviraj', serif;
+}
+
+.main-container #home .profile-container .summery {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+}
+
+.main-container #home .profile-container .skill-container {
+  position: absolute;
+  font-size: 30px;
+  left: 60%;
+  top: 65%;
 }
 
 .main-container #work {
