@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Taviraj:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@100&display=swap");
 
 * {
   margin: 0;
@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-// variables
-$themeColor: rgb(252, 193, 2);
-$themeFontFamily: 'Taviraj', serif;
-
-// mixins
-@mixin fadeInAnimation($animeDuration) {
-  opacity: 0;
-  animation: 2s fadeIn forwards $animeDuration;
+body {
+  display: block;
 }
