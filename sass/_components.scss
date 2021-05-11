@@ -1,12 +1,10 @@
 ul {
-  //   margin: 0;
-  //   padding: 0;
-  //   margin-block-start: 1em;
-  //   margin-block-end: 1em;
-  //   margin-inline-start: 0px;
-  //   margin-inline-end: 0px;
-  //   padding-inline-start: 40px;
   list-style: none;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 .main-menu-nav {
@@ -17,6 +15,7 @@ ul {
   position: fixed;
   transform-origin: left top;
   transform: rotate(-90deg) translateX(-100%);
+  font-family: "Unna", serif;
   z-index: 99;
 
   ul {
@@ -30,6 +29,7 @@ ul {
 
     li {
       padding: 0 20px;
+      font-size: 1.3rem;
     }
   }
 }
@@ -37,10 +37,15 @@ ul {
 .sns-nav {
   height: 100vh;
   right: 25px;
-  top: 36%;
+  top: 35%;
   position: fixed;
   z-index: 99;
   text-align: center;
   width: 3%;
   margin-right: 10px;
+
+  li {
+    margin: 20px;
+    font-size: 1.8rem;
+  }
 }
