@@ -63,7 +63,50 @@ ul {
 
 .home-section {
   height: 100vh;
-  width: 100%;
-  background: salmon;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.7);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-section .introduction-container {
+  height: 100vh;
+  width: 30%;
+}
+
+.home-section .img-blur {
+  position: relative;
+  height: 100vh;
+  width: 40vw;
+  margin-left: 50%;
+  z-index: 0;
+}
+
+.home-section .img-blur::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: inset 0 0 20px 20px white;
+          box-shadow: inset 0 0 20px 20px white;
+}
+
+.home-section .img-blur .profile-img {
+  height: 100%;
+  width: 40vw;
+  background: url(../img/miyabi.JPG) no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.work-section {
+  height: 100vh;
+  width: 100vw;
+  background: lightcoral;
 }
 /*# sourceMappingURL=main.css.map */
