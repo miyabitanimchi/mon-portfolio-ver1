@@ -1,5 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unna&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,14 +79,15 @@ ul a {
   font-size: 1.8rem;
 }
 
-.home-section {
+#home-section {
   height: 100vh;
   width: 100vw;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
 }
 
-.home-section .introduction-container {
+#home-section .introduction-container {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,7 +99,7 @@ ul a {
           align-items: center;
 }
 
-.home-section .introduction-container .introduction {
+#home-section .introduction-container .introduction {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -102,26 +108,29 @@ ul a {
   font-weight: bold;
 }
 
-.home-section .introduction-container .img-blur {
+#home-section .introduction-container .img-blur {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: relative;
-  height: 100vh;
+  height: 85%;
   width: 40vw;
   z-index: 0;
 }
 
-.home-section .introduction-container .img-blur::after {
+#home-section .introduction-container .img-blur::after {
   position: absolute;
   content: "";
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: inset 0 0 20px 20px white;
-          box-shadow: inset 0 0 20px 20px white;
+  background: rgba(243, 147, 4, 0.15);
+  -webkit-box-shadow: inset 0 0 15px 15px white;
+          box-shadow: inset 0 0 15px 15px white;
 }
 
-.home-section .introduction-container .img-blur .profile-img {
+#home-section .introduction-container .img-blur .profile-img {
   height: 100%;
   width: 40vw;
   background: url(../img/miyabi.JPG) no-repeat center center;
@@ -129,7 +138,7 @@ ul a {
   z-index: 0;
 }
 
-.home-section .link-to-work {
+#home-section .link-to-work {
   position: absolute;
   left: 50%;
   top: 90%;
@@ -140,21 +149,43 @@ ul a {
   font-size: 1.2rem;
   border: 1px solid gray;
   border-radius: 3px;
-  padding: 5px 8px;
+  padding: 8px 12px；;
 }
 
-.work-section,
-.about-section,
+#work-section,
+#about-section,
 .contact-section {
   height: 100vh;
   width: 100vw;
 }
 
-.work-section {
+#work-section {
   background: coral;
 }
 
-.about-section {
+#work-section .work-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+#work-section .work-container .work {
+  width: 27%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 2rem;
+}
+
+#about-section {
   background: lightcoral;
 }
 
