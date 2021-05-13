@@ -152,7 +152,6 @@ ul a {
   padding: 8px 12px；;
 }
 
-#work-section,
 #about-section,
 .contact-section {
   height: 100vh;
@@ -160,28 +159,45 @@ ul a {
 }
 
 #work-section {
+  height: 100%;
   background: coral;
+}
+
+#work-section h1 {
+  text-align: center;
+  font-family: "Taviraj", serif;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 #work-section .work-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#work-section .work-container .work-row1,
+#work-section .work-container .work-row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  margin: 1rem 0;
 }
 
 #work-section .work-container .work {
-  width: 27%;
-  height: 30%;
-  background: rgba(255, 255, 255, 0.5);
+  width: 300px;
+  height: 240px;
+  background: rgba(75, 46, 46, 0.5);
   margin: 2rem;
 }
 
@@ -191,5 +207,30 @@ ul a {
 
 .contact-section {
   background: salmon;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-property: opacity transform;
+  transition-property: opacity transform;
+}
+
+.fade-in-up {
+  -webkit-transform: translate(0 50px);
+          transform: translate(0 50px);
+}
+
+.scroll-in {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+@media screen and (min-width: 1150px) {
+  #work-section {
+    height: 100vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */
