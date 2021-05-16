@@ -20,7 +20,7 @@
       align-self: center;
       position: relative;
       height: 85%;
-      width: 40vw;
+      width: 50%;
 
       z-index: 0;
 
@@ -37,7 +37,7 @@
       }
       .profile-img {
         height: 100%;
-        width: 40vw;
+        width: 100%;
         background: url(../img/miyabi.JPG) no-repeat center center;
         background-size: cover;
         border-radius: 50%;
@@ -66,7 +66,6 @@
 }
 #work-section {
   height: 100%;
-  // background: coral;
 
   h1 {
     text-align: center;
@@ -78,11 +77,10 @@
   .work-container {
     display: flex;
     flex-direction: column;
-    // height: 100vh;
     .work-row1,
     .work-row2 {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
       margin: 1rem 0;
     }
@@ -110,8 +108,7 @@
     .what-i-love-container {
       position: relative;
       overflow: hidden;
-      // padding-top: 60%;
-      width: 50vw;
+      width: 50%;
       height: 90vh;
       background: pink;
       img {
@@ -137,6 +134,52 @@
     .aboutme-text-container {
       width: 40%;
       margin: 0 auto;
+    }
+  }
+}
+
+.contact-section {
+  h1 {
+    text-align: center;
+    font-family: $themeFont;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+    font-family: $themeFont;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    .name-mail-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-self: center;
+      padding-bottom: 1rem;
+      input {
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem 0;
+      }
+      div {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .textarea-container {
+      width: 100%;
+      textarea {
+        width: 100%;
+        height: 14rem;
+      }
     }
   }
 }
