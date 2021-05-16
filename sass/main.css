@@ -22,6 +22,11 @@ body {
   margin: 0 auto;
 }
 
+.modal-activated {
+  overflow: hidden;
+  height: 100vh;
+}
+
 ul {
   list-style: none;
 }
@@ -221,7 +226,8 @@ ul a {
 }
 
 #work-section {
-  height: 100%;
+  height: 130vh !important;
+  background: salmon;
 }
 
 #work-section h1 {
@@ -256,11 +262,36 @@ ul a {
 }
 
 #work-section .work-container .work {
-  width: 300px;
-  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 450px;
+  height: 350px;
   background: rgba(75, 46, 46, 0.5);
   margin: 2rem;
   border-radius: 15px;
+}
+
+#work-section .work-container .work p {
+  margin-bottom: 10px;
+}
+
+#work-section .work-container .work img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #about-section {

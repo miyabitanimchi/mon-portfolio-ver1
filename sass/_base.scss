@@ -23,3 +23,9 @@ body {
 
 // variables
 $themeFont: "Taviraj", serif;
+
+// when modal is activated
+.modal-activated {
+  overflow: hidden;
+  height: 100vh;
+}

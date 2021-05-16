@@ -18,6 +18,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Slider for About page
+let index = -1;
 const slideImg = () => {
   const imgSrc = [
     "https://2.bp.blogspot.com/-VA8DS8XXYKw/WLEurNb7xVI/AAAAAAABCF4/8oFo3A3VlYkQWi6YV3AhaYh8ndqn_bPtgCLcB/s800/computer07_woman.png",
@@ -31,7 +32,7 @@ const slideImg = () => {
     "I love drawing",
     "I love traveling",
   ];
-  let index = -1;
+
   if (index === 3) {
     index = 0;
   } else {
@@ -53,20 +54,24 @@ const open = document.querySelectorAll(".open");
 const close = document.getElementById("close");
 const modal = document.getElementById("modal");
 const mask = document.getElementById("modalMask");
+const modalActivated = document.getElementById("modalActivated");
 
 open.forEach((workEl) => {
   workEl.addEventListener("click", () => {
     modal.classList.remove("hidden-modal");
     mask.classList.remove("hidden-mask");
+    modalActivated.classList.add("modal-activated");
   });
 });
 
 close.addEventListener("click", function () {
   modal.classList.add("hidden-modal");
   mask.classList.add("hidden-mask");
+  modalActivated.classList.remove("modal-activated");
 });
 
 mask.addEventListener("click", function () {
   modal.classList.add("hidden-modal");
   mask.classList.add("hidden-mask");
+  modalActivated.classList.remove("modal-activated");
 });
