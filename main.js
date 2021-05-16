@@ -18,21 +18,22 @@ window.addEventListener("scroll", () => {
 });
 
 // Slider for About page
-const imgSrc = [
-  "https://2.bp.blogspot.com/-VA8DS8XXYKw/WLEurNb7xVI/AAAAAAABCF4/8oFo3A3VlYkQWi6YV3AhaYh8ndqn_bPtgCLcB/s800/computer07_woman.png",
-  "./img/dance.JPG",
-  "./img/drawing.JPG",
-  "./img/traveling.JPG",
-];
-const captionForImg = [
-  "I love coding",
-  "I love dancing",
-  "I love drawing",
-  "I love traveling",
-];
+
 let index = -1;
 
 const slideImg = () => {
+  const imgSrc = [
+    "https://2.bp.blogspot.com/-VA8DS8XXYKw/WLEurNb7xVI/AAAAAAABCF4/8oFo3A3VlYkQWi6YV3AhaYh8ndqn_bPtgCLcB/s800/computer07_woman.png",
+    "./img/dance.JPG",
+    "./img/drawing.JPG",
+    "./img/traveling.JPG",
+  ];
+  const captionForImg = [
+    "I love coding",
+    "I love dancing",
+    "I love drawing",
+    "I love traveling",
+  ];
   if (index === 3) {
     index = 0;
   } else {
@@ -40,6 +41,10 @@ const slideImg = () => {
   }
   document.getElementById("slideImg").src = imgSrc[index];
   document.getElementById("caption-for-img").innerHTML = captionForImg[index];
+  const fadedInEl = document.querySelectorAll(".faded-in");
+  fadedInEl.forEach((val) => {
+    val.classList.add("fade-in-animation");
+  });
 };
 setInterval(slideImg, 3500);
 
