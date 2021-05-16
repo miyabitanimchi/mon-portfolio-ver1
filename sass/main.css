@@ -22,11 +22,6 @@ body {
   margin: 0 auto;
 }
 
-.modal-activated {
-  overflow: hidden;
-  height: 100vh;
-}
-
 ul {
   list-style: none;
 }
@@ -100,21 +95,15 @@ ul a {
 }
 
 #modal {
-  background: #fff;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.95);
   color: #555;
   width: 800px;
   height: 400px;
   padding: 40px;
   border-radius: 4px;
   position: absolute;
-  top: 150%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  right: 0;
   z-index: 2;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 #modal p {
@@ -123,8 +112,6 @@ ul a {
 
 .hidden-modal {
   display: none;
-  -webkit-transform: translate(0, -2000px);
-          transform: translate(0, -2000px);
 }
 
 .hidden-mask {
@@ -142,6 +129,34 @@ ul a {
   margin: 16px auto 0;
   background: #4caf50;
   color: white;
+}
+
+.modal-activated {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.modal-animation {
+  -webkit-animation: modalFadeIn 0.5s;
+          animation: modalFadeIn 0.5s;
+}
+
+@-webkit-keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #home-section {
@@ -425,6 +440,10 @@ ul a {
 #contact-section form .textarea-container textarea {
   width: 100%;
   height: 14rem;
+}
+
+#contact-section footer {
+  text-align: center;
 }
 
 #contact-section {

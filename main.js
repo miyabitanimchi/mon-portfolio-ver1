@@ -59,8 +59,13 @@ const modalActivated = document.getElementById("modalActivated");
 open.forEach((workEl) => {
   workEl.addEventListener("click", () => {
     modal.classList.remove("hidden-modal");
+    modal.classList.add("modal-animation");
     mask.classList.remove("hidden-mask");
     modalActivated.classList.add("modal-activated");
+    modal.style.opacity = 1;
+    // get center position for modal
+    modal.style.left = `${window.innerWidth / 2 - 400}px`;
+    modal.style.top = `${window.pageYOffset + window.innerHeight / 2 - 200}px`;
   });
 });
 
@@ -75,3 +80,8 @@ mask.addEventListener("click", function () {
   mask.classList.add("hidden-mask");
   modalActivated.classList.remove("modal-activated");
 });
+
+// console.log(window.innerHeight);
+// console.log(window.innerWidth);
+// console.log(window.pageYOffset);
+// console.log(window.pageXOffset);
