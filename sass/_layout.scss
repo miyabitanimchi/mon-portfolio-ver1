@@ -94,7 +94,6 @@
 }
 
 #about-section {
-  background: lightcoral;
   display: flex;
   flex-direction: column;
   h1 {
@@ -110,7 +109,6 @@
       overflow: hidden;
       width: 50%;
       height: 90vh;
-      background: pink;
       img {
         position: absolute;
         top: 20%;
@@ -121,6 +119,13 @@
         object-fit: cover;
         border-radius: 10px;
         animation: fadeInImg 3.5s infinite;
+      }
+
+      #caption-for-img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
       }
       @keyframes fadeInImg {
         0% {

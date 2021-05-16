@@ -6,9 +6,9 @@ window.addEventListener("scroll", () => {
   const scroll = window.pageYOffset || document.documentElement.scrollTop;
   const offset = work + scroll;
   const windowHeight = window.innerHeight;
-  console.log(
-    `work: ${work}, scroll: ${scroll}, offset: ${offset}, windowHeight: ${windowHeight}`
-  );
+  // console.log(
+  //   `work: ${work}, scroll: ${scroll}, offset: ${offset}, windowHeight: ${windowHeight}`
+  // );
 
   if (scroll > offset - 200) {
     workTarget.forEach((work) => {
@@ -24,15 +24,22 @@ const imgSrc = [
   "./img/drawing.JPG",
   "./img/traveling.JPG",
 ];
-let imgIndex = -1;
+const captionForImg = [
+  "I love coding",
+  "I love dancing",
+  "I love drawing",
+  "I love traveling",
+];
+let index = -1;
 
 const slideImg = () => {
-  if (imgIndex === 3) {
-    imgIndex = 0;
+  if (index === 3) {
+    index = 0;
   } else {
-    imgIndex++;
+    index++;
   }
-  document.getElementById("slideImg").src = imgSrc[imgIndex];
+  document.getElementById("slideImg").src = imgSrc[index];
+  document.getElementById("caption-for-img").innerHTML = captionForImg[index];
 };
 setInterval(slideImg, 3500);
 
