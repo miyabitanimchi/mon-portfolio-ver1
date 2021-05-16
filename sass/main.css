@@ -84,6 +84,61 @@ ul a {
   font-size: 1.8rem;
 }
 
+#modalMask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #fff;
+  color: #555;
+  width: 800px;
+  height: 400px;
+  padding: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  right: 0;
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#modal p {
+  margin: 0 0 20px;
+}
+
+.hidden-modal {
+  display: none;
+  -webkit-transform: translate(0, -2000px);
+          transform: translate(0, -2000px);
+}
+
+.hidden-mask {
+  display: none;
+}
+
+.open,
+#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px;
+  margin: 16px auto 0;
+  background: #4caf50;
+  color: white;
+}
+
 #home-section {
   height: 100vh;
   width: 100vw;
