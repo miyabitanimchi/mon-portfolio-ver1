@@ -107,6 +107,7 @@ ul a {
 
 #modal p {
   margin: 0 0 20px;
+  text-align: center;
 }
 
 .hidden-modal {
@@ -118,16 +119,21 @@ ul a {
 }
 
 .open,
+#viewApplicationBtn,
 #close {
   cursor: pointer;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
-  padding: 12px;
-  margin: 16px auto 0;
-  background: #ced8da;
+  margin: 0 auto;
+  background: #bfc0c0;
   color: white;
+  text-decoration: none;
+}
+
+#close {
+  padding: 5px 0;
 }
 
 .modal-activated {
@@ -156,6 +162,15 @@ ul a {
   100% {
     opacity: 1;
   }
+}
+
+.link-to-app {
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.link-to-app #viewApplicationBtn {
+  padding: 9px 33px;
 }
 
 #home-section {
@@ -229,7 +244,7 @@ ul a {
   color: #000;
   font-size: 1.2rem;
   border: 1px solid rgba(131, 128, 128, 0.9);
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 8px 12px;
 }
 
@@ -295,6 +310,9 @@ ul a {
 #work-section .work-container .work p {
   margin-bottom: 10px;
   color: #000000;
+  font-family: "Taviraj", serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
 
 #work-section .work-container .work img {
@@ -322,7 +340,7 @@ ul a {
 }
 
 #work-section .work-container .work .tech-container .html {
-  background: #f83403;
+  background: #f56946;
 }
 
 #work-section .work-container .work .tech-container .css {
@@ -338,7 +356,7 @@ ul a {
 }
 
 #work-section .work-container .work .tech-container .bootstrap {
-  background: #9149f0;
+  background: #bd8ff8;
 }
 
 #about-section .main-container {
@@ -372,13 +390,15 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 75vh;
+  border: solid rgba(155, 156, 158, 0.3);
+  border-width: 0 1px;
 }
 
 #about-section .main-container .aboutme-container .what-i-love-container {
@@ -434,6 +454,24 @@ ul a {
 
 #contact-section {
   font-family: "Taviraj", serif;
+  position: relative;
+}
+
+#contact-section .coming-soon-notice {
+  position: absolute;
+  background: rgba(241, 240, 240, 0.8);
+  width: 40%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#contact-section .coming-soon-notice p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 #contact-section h1 {

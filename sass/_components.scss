@@ -71,8 +71,10 @@ ul {
   border-radius: 4px;
   position: absolute;
   z-index: 2;
+
   p {
     margin: 0 0 20px;
+    text-align: center;
   }
 }
 
@@ -85,16 +87,20 @@ ul {
 }
 
 .open,
+#viewApplicationBtn,
 #close {
   cursor: pointer;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
-  padding: 12px;
-  margin: 16px auto 0;
-  background: #ced8da;
+  margin: 0 auto;
+  background: #bfc0c0;
   color: white;
+  text-decoration: none;
+}
+#close {
+  padding: 5px 0;
 }
 // when modal is activated, height of body will be 100vh so you can't scroll
 .modal-activated {
@@ -112,5 +118,13 @@ ul {
     100% {
       opacity: 1;
     }
+  }
+}
+
+.link-to-app {
+  margin: 0 auto 20px;
+  text-align: center;
+  #viewApplicationBtn {
+    padding: 9px 33px;
   }
 }

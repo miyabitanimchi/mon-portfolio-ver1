@@ -1,16 +1,27 @@
 const fadeInTarget = document.querySelector(".work-container");
+const fadeInTargetForAboutme = document.querySelector(".aboutme-container");
 const workTarget = document.querySelectorAll(".work");
+let selectedWork;
 
+// fade-in function
 window.addEventListener("scroll", () => {
-  const work = fadeInTarget.getBoundingClientRect().top;
   const scroll = window.pageYOffset || document.documentElement.scrollTop;
+  const work = fadeInTarget.getBoundingClientRect().top;
+
   const offset = work + scroll;
-  const windowHeight = window.innerHeight;
+  // const windowHeight = window.innerHeight;
+  const aboutMe = fadeInTargetForAboutme.getBoundingClientRect().top;
+  const offsetForAboutMe = aboutMe + scroll;
 
   if (scroll > offset - 200) {
     workTarget.forEach((work) => {
       work.classList.add("scroll-in");
     });
+
+    if (scroll > offsetForAboutMe - 200) {
+      fadeInTargetForAboutme.classList.add("scroll-in");
+      document.getElementById("resume").classList.add("scroll-in");
+    }
   }
 });
 
@@ -48,13 +59,13 @@ setInterval(slideImg, 3500);
 
 slideImg();
 
-// modal
+// show / close modal
 const open = document.querySelectorAll(".open");
 const close = document.getElementById("close");
 const modal = document.getElementById("modal");
 const mask = document.getElementById("modalMask");
 const modalActivated = document.getElementById("modalActivated");
-let selectedWork;
+const viewApplicationBtn = document.getElementById("viewApplicationBtn");
 
 open.forEach((workEl) => {
   workEl.addEventListener("click", () => {
@@ -67,6 +78,25 @@ open.forEach((workEl) => {
     modal.style.left = `${window.innerWidth / 2 - 400}px`;
     modal.style.top = `${window.pageYOffset + window.innerHeight / 2 - 200}px`;
     selectedWork = workEl.getAttribute("data-value");
+    switch (selectedWork) {
+      case "1":
+        viewApplicationBtn.href =
+          "https://miyabitanimchi.github.io/weatherApp_wd2_midterm_project/";
+        break;
+      case "2":
+        viewApplicationBtn.href =
+          "https://miyabitanimchi.github.io/cinema-booking-app/";
+        break;
+      case "3":
+        viewApplicationBtn.href =
+          "https://miyabitanimchi.github.io/flappy_buddy/";
+        break;
+      case "4":
+        viewApplicationBtn.href = "#";
+        break;
+      default:
+        viewApplicationBtn.href = "#";
+    }
   });
 });
 
@@ -74,6 +104,7 @@ close.addEventListener("click", function () {
   modal.classList.add("hidden-modal");
   mask.classList.add("hidden-mask");
   modalActivated.classList.remove("modal-activated");
+  console.log(selectedWork);
 });
 
 mask.addEventListener("click", function () {
@@ -81,8 +112,3 @@ mask.addEventListener("click", function () {
   mask.classList.add("hidden-mask");
   modalActivated.classList.remove("modal-activated");
 });
-
-// show each detail of work
-const showDetail = () => {
-  const viewApplicationBtn = document.getElementById("viewApplicationBtn");
-};
