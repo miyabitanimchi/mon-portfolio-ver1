@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unna&display=swap");
 html {
@@ -229,9 +228,9 @@ ul a {
   text-decoration: none;
   color: #000;
   font-size: 1.2rem;
-  border: 1px solid rgba(245, 245, 245, 0.9);
+  border: 1px solid rgba(131, 128, 128, 0.9);
   border-radius: 3px;
-  padding: 8px 12px；;
+  padding: 8px 12px;
 }
 
 #about-section,
@@ -307,6 +306,39 @@ ul a {
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#work-section .work-container .work .tech-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+}
+
+#work-section .work-container .work .tech-container .tech {
+  border-radius: 5px;
+  padding: 0 3px;
+  margin-right: 2px;
+}
+
+#work-section .work-container .work .tech-container .html {
+  background: #f83403;
+}
+
+#work-section .work-container .work .tech-container .css {
+  background: #4c87f5;
+}
+
+#work-section .work-container .work .tech-container .sass {
+  background: #fc657e;
+}
+
+#work-section .work-container .work .tech-container .js {
+  background: #f7cd12;
+}
+
+#work-section .work-container .work .tech-container .bootstrap {
+  background: #9149f0;
 }
 
 #about-section .main-container {
@@ -400,9 +432,12 @@ ul a {
   text-decoration: none;
 }
 
+#contact-section {
+  font-family: "Taviraj", serif;
+}
+
 #contact-section h1 {
   text-align: center;
-  font-family: "Taviraj", serif;
   font-size: 2.5rem;
   padding-top: 1.5rem;
 }
@@ -424,7 +459,6 @@ ul a {
   height: 80vh;
   width: 100%;
   margin: 0 auto;
-  font-family: "Taviraj", serif;
   font-weight: bold;
   font-size: 1.3rem;
 }

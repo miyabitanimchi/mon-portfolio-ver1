@@ -53,9 +53,9 @@
     text-decoration: none;
     color: #000;
     font-size: 1.2rem;
-    border: 1px solid rgba(245, 245, 245, 0.9);
+    border: 1px solid rgba(131, 128, 128, 0.9);
     border-radius: 3px;
-    padding: 8px 12px；;
+    padding: 8px 12px;
   }
 }
 
@@ -105,6 +105,31 @@
         height: 80%;
         border-radius: 15px;
         object-fit: cover;
+      }
+      .tech-container {
+        display: flex;
+        margin-top: 5px;
+
+        .tech {
+          border-radius: 5px;
+          padding: 0 3px;
+          margin-right: 2px;
+        }
+        .html {
+          background: rgb(248, 52, 3);
+        }
+        .css {
+          background: rgb(76, 135, 245);
+        }
+        .sass {
+          background: rgb(252, 101, 126);
+        }
+        .js {
+          background: rgb(247, 205, 18);
+        }
+        .bootstrap {
+          background: rgb(145, 73, 240);
+        }
       }
     }
   }
@@ -182,9 +207,9 @@
 }
 
 #contact-section {
+  font-family: $themeFont;
   h1 {
     text-align: center;
-    font-family: $themeFont;
     font-size: 2.5rem;
     padding-top: 1.5rem;
   }
@@ -196,7 +221,6 @@
     height: 80vh;
     width: 100%;
     margin: 0 auto;
-    font-family: $themeFont;
     font-weight: bold;
     font-size: 1.3rem;
 
@@ -229,11 +253,6 @@
     text-align: center;
   }
 }
-
-// #contact-section {
-//   background: salmon;
-// }
-
 // fade-in animation
 .fade-in {
   opacity: 0;
