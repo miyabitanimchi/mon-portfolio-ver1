@@ -31,7 +31,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(243, 147, 4, 0.15);
+        background: rgba(240, 124, 220, 0.15);
         border-radius: 50%;
         box-shadow: inset 0 0 10px 10px white;
       }
@@ -53,7 +53,7 @@
     text-decoration: none;
     color: #000;
     font-size: 1.2rem;
-    border: 1px solid gray;
+    border: 1px solid rgba(245, 245, 245, 0.9);
     border-radius: 3px;
     padding: 8px 12px；;
   }
@@ -65,8 +65,7 @@
   width: 100vw;
 }
 #work-section {
-  height: 130vh !important;
-  background: salmon;
+  height: 140vh !important;
 
   h1 {
     text-align: center;
@@ -91,12 +90,13 @@
       justify-content: center;
       width: 450px;
       height: 350px;
-      background: rgba(75, 46, 46, 0.5);
+      background: rgba(245, 245, 245, 0.5);
       margin: 2rem;
       border-radius: 15px;
 
       p {
         margin-bottom: 10px;
+        color: #000000;
       }
 
       img {
@@ -111,54 +111,72 @@
 }
 
 #about-section {
-  display: flex;
-  flex-direction: column;
-  h1 {
-    text-align: center;
-    font-family: $themeFont;
-    font-size: 2.5rem;
-    padding-top: 1.5rem;
-  }
-  .aboutme-container {
+  .main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    .what-i-love-container {
+    h1 {
+      text-align: center;
+      font-family: $themeFont;
+      font-size: 2.5rem;
+      padding-top: 1.5rem;
+    }
+    h3 {
+      font-family: $themeFont;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: rgb(77, 79, 82);
+    }
+    .aboutme-container {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      // position: relative;
-      overflow: hidden;
-      width: 50%;
-      height: 90vh;
-      img {
-        // position: absolute;
-        // top: 20%;
-        // left: 50%;
-        // transform: translate(-50%, 0);
-        align-self: center;
-        width: 80%;
-        height: 50%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
+      height: 75vh;
+      .what-i-love-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // position: relative;
+        overflow: hidden;
+        width: 50%;
+        height: 90vh;
+        img {
+          // position: absolute;
+          // top: 20%;
+          // left: 50%;
+          // transform: translate(-50%, 0);
+          align-self: center;
+          width: 80%;
+          height: 50%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
 
-      #caption-for-img {
-        // position: absolute;
-        // top: 10%;
-        // left: 50%;
-        // transform: translate(-50%, 0);
-        font-family: $themeFont;
-        font-weight: bold;
-        font-size: 1.2rem;
+        #caption-for-img {
+          // position: absolute;
+          // top: 10%;
+          // left: 50%;
+          // transform: translate(-50%, 0);
+          font-family: $themeFont;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+      .aboutme-text-container {
+        width: 40%;
+        margin: 0 auto;
+        // align-self: center;
+        text-align: justify;
       }
     }
-    .aboutme-text-container {
-      width: 40%;
+    #resume {
+      border: 1px solid rgba(102, 100, 100, 0.9);
+      border-radius: 5px;
       margin: 0 auto;
-      // align-self: center;
-      text-align: justify;
+      padding: 10px 20px;
+      color: #000000;
+      text-decoration: none;
     }
   }
 }
@@ -212,9 +230,9 @@
   }
 }
 
-#contact-section {
-  background: salmon;
-}
+// #contact-section {
+//   background: salmon;
+// }
 
 // fade-in animation
 .fade-in {

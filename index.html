@@ -73,44 +73,40 @@
         <!-- Modal -->
         <div id="modalMask" class="hidden-mask"></div>
         <section id="modal" class="hidden-modal">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-            eligendi cum, nulla officia ratione, placeat quod libero sit porro
-            consequatur error quia in dicta ipsam atque! Alias dolor ratione
-            esse.
-          </p>
+          <p>Details... Coming Soon!</p>
+          <a href="#" id="viewApplicationBtn">View Application</a>
           <div id="close">Close</div>
         </section>
         <div class="main-container">
           <h1>Works</h1>
           <div class="work-container">
             <div class="work-row1">
-              <div class="work fade-in fade-in-up open">
+              <div class="work fade-in fade-in-up open" data-value="1">
                 <p>Open Weather App</p>
                 <img src="./img/weatherapp-darkmode.png" alt="weather app" />
               </div>
-              <div class="work fade-in fade-in-up open">
+              <div class="work fade-in fade-in-up open" data-value="2">
                 <p>Movie Booking App</p>
                 <img
                   src="./img/movie-booking-app.png"
                   alt="movie booking app"
                 />
               </div>
-              <div class="work fade-in fade-in-up open">
+              <div class="work fade-in fade-in-up open" data-value="3">
                 <p>Flappy Buddy</p>
                 <img src="./img/flappybuddy.png" alt="flappy buddy" />
               </div>
             </div>
             <div class="work-row2">
-              <div class="work fade-in fade-in-up open">
+              <div class="work fade-in fade-in-up open" data-value="4">
                 <p>My portfolio</p>
                 <img src="./img/myportfolio.png" alt="My portfolio" />
               </div>
-              <div class="work fade-in fade-in-up open">
+              <div class="work fade-in fade-in-up open" data-value="5">
                 <p>Flappy Buddy</p>
                 <img src="./img/flappybuddy.png" alt="flappy buddy" />
               </div>
-              <div class="work fade-in fade-in-up open">
+              <div class="work fade-in fade-in-up open" data-value="6">
                 <p>Flappy Buddy</p>
                 <img src="./img/flappybuddy.png" alt="flappy buddy" />
               </div>
@@ -120,41 +116,56 @@
       </section>
       <section id="about-section">
         <div class="main-container">
-          <div class="main-container">
-            <h1>About Me</h1>
-            <div class="aboutme-container">
-              <div class="what-i-love-container">
-                <p id="caption-for-img" class="faded-in">test</p>
-                <img
-                  class="faded-in"
-                  src="https://2.bp.blogspot.com/-VA8DS8XXYKw/WLEurNb7xVI/AAAAAAABCF4/8oFo3A3VlYkQWi6YV3AhaYh8ndqn_bPtgCLcB/s800/computer07_woman.png"
-                  alt="Me coding"
-                  id="slideImg"
-                  class="slider"
-                />
+          <h1>About Me</h1>
+          <div class="aboutme-container">
+            <div class="what-i-love-container">
+              <p id="caption-for-img" class="faded-in">test</p>
+              <img
+                class="faded-in"
+                src="https://2.bp.blogspot.com/-VA8DS8XXYKw/WLEurNb7xVI/AAAAAAABCF4/8oFo3A3VlYkQWi6YV3AhaYh8ndqn_bPtgCLcB/s800/computer07_woman.png"
+                alt="Me coding"
+                id="slideImg"
+                class="slider"
+              />
+            </div>
+            <div class="aboutme-text-container">
+              <div class="aboutme-text">
+                <h3>About Me</h3>
+                <p>
+                  My name is Miyabi Tanimichi and you can call me Mia as well. I
+                  am a frontend developer based in Vancouver. I am very
+                  enthusiastic about building websites and getting new skills
+                  every single day.
+                </p>
+                <br />
+                <p>
+                  I especially love thinking about how JavaScript code can be
+                  implemented to make things happen dynamically and how I can
+                  fix bugs.
+                </p>
+                <br />
+                <p>
+                  With my experience of working as a sales person and in a
+                  customer support, I can well communicate and discuss with
+                  cliants and coworkers as well.
+                </p>
+                <br />
               </div>
-              <div class="aboutme-text-container">
+              <div class="skills-text">
+                <h3>Skills</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Harum fugit eaque deserunt eos sequi. Vero, doloremque, fugit
-                  molestias iure corrupti ex recusandae perferendis temporibus
-                  quis, nisi ipsa nihil laboriosam sit.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Harum fugit eaque deserunt eos sequi. Vero, doloremque, fugit
-                  molestias iure corrupti ex recusandae perferendis temporibus
-                  quis, nisi ipsa nihil laboriosam sit.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Harum fugit eaque deserunt eos sequi. Vero, doloremque, fugit
-                  molestias iure corrupti ex recusandae perferendis temporibus
-                  quis, nisi ipsa nihil laboriosam sit.
+                  HTML, CSS, Sass, JavaScript, jQuery, Git, Bootstrap,
+                  React.js(currently learnig very hard)
                 </p>
               </div>
             </div>
           </div>
+          <a
+            href="./img/MiaMiyabi_Tanimichi_Resume.pdf"
+            download="miyabiT-resume.pdf"
+            id="resume"
+            ><div>Download Resume</div></a
+          >
         </div>
       </section>
       <section id="contact-section">
