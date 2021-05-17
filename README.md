@@ -2,6 +2,6 @@
 
 ## To Do
 
-• Responsive web design
-• Create details on modal
-• Contact form
+• Responsive web design <br/>
+• Create details on modal<br/>
+• Contact form<br/>
