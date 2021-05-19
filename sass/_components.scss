@@ -19,14 +19,11 @@ ul {
   z-index: 99;
 
   ul {
-    display: flex;
+    @include disply-list-aligncenter;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
-
     position: relative;
-
     li {
       padding: 0 20px;
       font-size: 1.3rem;

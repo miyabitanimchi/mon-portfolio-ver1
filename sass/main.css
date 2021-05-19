@@ -47,14 +47,14 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -185,12 +185,12 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #home-section .introduction-container .introduction {
@@ -219,7 +219,7 @@ ul a {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(240, 124, 220, 0.15);
+  background: rgba(240, 90, 202, 0.15);
   border-radius: 50%;
   -webkit-box-shadow: inset 0 0 10px 10px white;
           box-shadow: inset 0 0 10px 10px white;
@@ -273,6 +273,7 @@ ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Taviraj", serif;
 }
 
 #work-section .work-container .work-row1,
@@ -280,12 +281,12 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 1rem 0;
 }
 
@@ -305,12 +306,12 @@ ul a {
   background: rgba(245, 245, 245, 0.5);
   margin: 2rem;
   border-radius: 15px;
+  padding: 0.8rem;
 }
 
 #work-section .work-container .work p {
   margin-bottom: 10px;
   color: #000000;
-  font-family: "Taviraj", serif;
   font-weight: bolder;
   font-size: 1.3rem;
 }
@@ -330,33 +331,35 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 
 #work-section .work-container .work .tech-container .tech {
   border-radius: 5px;
   padding: 0 3px;
-  margin-right: 2px;
+  margin-right: 0.2rem;
+  color: #000000;
+  font-weight: bold;
 }
 
 #work-section .work-container .work .tech-container .html {
-  background: #f56946;
+  background: #f8aeab;
 }
 
 #work-section .work-container .work .tech-container .css {
-  background: #4c87f5;
+  background: #c0d5fc;
 }
 
 #work-section .work-container .work .tech-container .sass {
-  background: #fc657e;
+  background: #fac5d6;
 }
 
 #work-section .work-container .work .tech-container .js {
-  background: #f7cd12;
+  background: #f5e8b1;
 }
 
 #work-section .work-container .work .tech-container .bootstrap {
-  background: #bd8ff8;
+  background: #dfcdf7;
 }
 
 #about-section .main-container {
@@ -390,12 +393,12 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 75vh;
   border: solid rgba(155, 156, 158, 0.3);
   border-width: 0 1px;
@@ -505,12 +508,13 @@ ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
   padding-bottom: 1rem;
 }
 

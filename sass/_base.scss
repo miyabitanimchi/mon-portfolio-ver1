@@ -24,3 +24,20 @@ body {
 
 // variables
 $themeFont: "Taviraj", serif;
+
+// mixins
+@mixin basic-display-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin disply-list-aligncenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin basic-size {
+  height: 100vh;
+  width: 100vw;
+}

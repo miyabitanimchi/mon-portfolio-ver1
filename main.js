@@ -92,7 +92,8 @@ open.forEach((workEl) => {
           "https://miyabitanimchi.github.io/flappy_buddy/";
         break;
       case "4":
-        viewApplicationBtn.href = "#";
+        viewApplicationBtn.href =
+          "https://miyabitanimchi.github.io/mon-portfolio-ver1/";
         break;
       default:
         viewApplicationBtn.href = "#";
