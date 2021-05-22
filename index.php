@@ -209,7 +209,8 @@
             </p>
           </div>
           <h1>Get in Touch</h1>
-          <form action="">
+          <!-- original -->
+          <!-- <form action="./contactform.php" method="POST">
             <div class="name-mail-container">
               <div>
                 <label for="yourname">Name: </label><br />
@@ -217,16 +218,67 @@
               </div>
               <div>
                 <label for="email">E-mail</label><br />
-                <input type="mail" name="email" id="email" />
+                <input type="email" name="email" id="email" />
               </div>
             </div>
             <div class="textarea-container">
               <label for="message" class="label-message">Message: </label><br />
               <textarea id="message" name="message"></textarea>
             </div>
-            <input type="submit" value="Send" />
+            <input type="submit" value="Confirm" />
+          </form> -->
+          <!-- original -->
+
+          <?php if($mode == "input") { ?>
+          <!-- input area -->
+          <form action="./contactform.php" method="POST">
+            <div class="name-mail-container">
+              <div>
+                <label for="yourname">Name: </label><br />
+                <input
+                  type="text"
+                  name="yourname"
+                  id="yourname"
+                  value='<?php echo $_SESSION["yourname"] ?>'
+                />
+              </div>
+              <div>
+                <label for="email">E-mail</label><br />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value='<?php echo $_SESSION["email"] ?>'
+                />
+              </div>
+            </div>
+            <div class="textarea-container">
+              <label for="message" class="label-message">Message: </label><br />
+              <textarea id="message" name="message">
+                <?php echo $_SESSION["message"] ?>
+                </textarea
+              >
+            </div>
+            <input type="submit" name="confirm" value="Confirm" />
           </form>
+          <?php } else if ($mode == "confirm") { ?>
+          <!-- confirm area -->
+          <form action="./contactform.php" method="POST">
+            Name:
+            <?php echo $_SESSION["yourname"] ?>
+            E-mail:
+            <?php echo $_SESSION["email"] ?>
+            Message:
+            <?php echo nl2br($_SESSION["message"]) ?>
+            <input type="submit" name="back" value="Back" />
+            <input type="submit" name="send" value="Send" />
+          </form>
+          <?php } else { ?>
+          <!-- complete area -->
+          <?php } ?>
+
           <footer>
+            <?php echo 3+2-1 ?>
             <span>&copy; 2021 Miyabi Tanimichi</span>
           </footer>
         </div>
