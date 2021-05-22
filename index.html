@@ -201,13 +201,13 @@
       </section>
       <section id="contact-section">
         <div class="main-container">
-          <div class="coming-soon-notice">
+          <!-- <div class="coming-soon-notice">
             <p>
               A contact form is under construction.<i class="fas fa-wrench"></i>
               For now, your message will be sent from
               <a href="mailto:mmyybb.mm@gmail.com">here</a>. Thank you!
             </p>
-          </div>
+          </div> -->
           <h1>Get in Touch</h1>
           <!-- original -->
           <!-- <form action="./contactform.php" method="POST">
@@ -229,9 +229,12 @@
           </form> -->
           <!-- original -->
 
-          <?php if($mode == "input") { ?>
+          <?php 
+            include "contactform.php";
+          ?>
+          <?php if ($mode == "input") { ?>
           <!-- input area -->
-          <form action="./contactform.php" method="POST">
+          <form action="./contactform.php" method="post">
             <div class="name-mail-container">
               <div>
                 <label for="yourname">Name: </label><br />
@@ -239,7 +242,7 @@
                   type="text"
                   name="yourname"
                   id="yourname"
-                  value='<?php echo $_SESSION["yourname"] ?>'
+                  value="<?php echo $_SESSION['yourname'] ?>"
                 />
               </div>
               <div>
@@ -248,22 +251,25 @@
                   type="email"
                   name="email"
                   id="email"
-                  value='<?php echo $_SESSION["email"] ?>'
+                  value="<?php echo $_SESSION['email'] ?>"
                 />
               </div>
             </div>
             <div class="textarea-container">
               <label for="message" class="label-message">Message: </label><br />
-              <textarea id="message" name="message">
-                <?php echo $_SESSION["message"] ?>
-                </textarea
+              <textarea
+                id="message"
+                name="message"
+                value="<?php echo $_SESSION['message'] ?>"
               >
+              </textarea>
             </div>
             <input type="submit" name="confirm" value="Confirm" />
           </form>
           <?php } else if ($mode == "confirm") { ?>
           <!-- confirm area -->
-          <form action="./contactform.php" method="POST">
+          <form action="./contactform.php" method="post">
+            <label for="yourname">Name</label>
             Name:
             <?php echo $_SESSION["yourname"] ?>
             E-mail:
