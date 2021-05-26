@@ -1,3 +1,34 @@
+<?php
+  session_start();
+  $error = [];
+
+  if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+    // check error when form is sent
+  if ($post["name"] === "") {
+    $error["name"] = "blank";
+  }
+  if ($post["email"] === "") {
+    $error["email"] = "blank";
+  } else if (!filter_var($post["email"], FILTER_VALIDATE_EMAIL)) {
+    $error["email"] = "email";
+  }
+  if ($post["message"] === "") {
+    $error["message"] = "blank";
+  }
+
+  if (count($error) === 0) {
+    $_SESSION["form"] = $post;
+    header("Location: confirm.php");
+    exit();
+  } else {
+    if (isset($_SESSION["form"])) {
+      $post = $_SESSION["form"];
+    }
+  }
+
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -201,90 +232,36 @@
       </section>
       <section id="contact-section">
         <div class="main-container">
-          <!-- <div class="coming-soon-notice">
-            <p>
-              A contact form is under construction.<i class="fas fa-wrench"></i>
-              For now, your message will be sent from
-              <a href="mailto:mmyybb.mm@gmail.com">here</a>. Thank you!
-            </p>
-          </div> -->
           <h1>Get in Touch</h1>
-          <!-- original -->
-          <!-- <form action="./contactform.php" method="POST">
+          <form action="./index.php#contact-section" method="POST" novalidate>
             <div class="name-mail-container">
               <div>
-                <label for="yourname">Name: </label><br />
-                <input type="text" name="yourname" id="yourname" />
+                <label for="name">Name: </label><br />
+                <!-- htmlspecialchars... 項目未入力時に既に入力したものが消えないようにする -->
+                <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($post["name"]); ?>" required/>
+                <?php if ($error["name"] === "blank"): ?>
+                  <p>*Input your name</p>
+                <?php endif; ?>
               </div>
               <div>
                 <label for="email">E-mail</label><br />
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($post["email"]); ?>"/>
+                <?php if ($error["email"] === "blank"): ?>
+                  <p>*Input your e-mail</p>
+                <?php endif; ?>
               </div>
             </div>
             <div class="textarea-container">
               <label for="message" class="label-message">Message: </label><br />
-              <textarea id="message" name="message"></textarea>
+              <textarea id="message" name="message" ><?php echo htmlspecialchars($post["message"]); ?></textarea>
+              <?php if ($error["message"] === "blank"): ?>
+                  <p>*Input your message</p>
+                <?php endif; ?>
             </div>
             <input type="submit" value="Confirm" />
-          </form> -->
-          <!-- original -->
-
-          <?php 
-            include "contactform.php";
-          ?>
-          <?php if ($mode == "input") { ?>
-          <!-- input area -->
-          <form action="./contactform.php" method="post">
-            <div class="name-mail-container">
-              <div>
-                <label for="yourname">Name: </label><br />
-                <input
-                  type="text"
-                  name="yourname"
-                  id="yourname"
-                  value="<?php echo $_SESSION['yourname'] ?>"
-                />
-              </div>
-              <div>
-                <label for="email">E-mail</label><br />
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value="<?php echo $_SESSION['email'] ?>"
-                />
-              </div>
-            </div>
-            <div class="textarea-container">
-              <label for="message" class="label-message">Message: </label><br />
-              <textarea
-                id="message"
-                name="message"
-                value="<?php echo $_SESSION['message'] ?>"
-              >
-              </textarea>
-            </div>
-            <input type="submit" name="confirm" value="Confirm" />
           </form>
-          <?php } else if ($mode == "confirm") { ?>
-          <!-- confirm area -->
-          <form action="./contactform.php" method="post">
-            <label for="yourname">Name</label>
-            Name:
-            <?php echo $_SESSION["yourname"] ?>
-            E-mail:
-            <?php echo $_SESSION["email"] ?>
-            Message:
-            <?php echo nl2br($_SESSION["message"]) ?>
-            <input type="submit" name="back" value="Back" />
-            <input type="submit" name="send" value="Send" />
-          </form>
-          <?php } else { ?>
-          <!-- complete area -->
-          <?php } ?>
 
           <footer>
-            <?php echo 3+2-1 ?>
             <span>&copy; 2021 Miyabi Tanimichi</span>
           </footer>
         </div>
@@ -294,4 +271,3 @@
     <script src="./main.js"></script>
   </body>
 </html>
-<!-- aaaa -->
