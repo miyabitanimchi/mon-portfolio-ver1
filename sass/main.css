@@ -248,12 +248,6 @@ ul a {
   padding: 8px 12px;
 }
 
-#about-section,
-#contact-section {
-  height: 100vh;
-  width: 100vw;
-}
-
 #work-section {
   height: 140vh !important;
 }
@@ -347,7 +341,7 @@ ul a {
 }
 
 #work-section .work-container .work .tech-container .css {
-  background: #c0d5fc;
+  background: #ceddfa;
 }
 
 #work-section .work-container .work .tech-container .sass {
@@ -360,6 +354,15 @@ ul a {
 
 #work-section .work-container .work .tech-container .bootstrap {
   background: #dfcdf7;
+}
+
+#work-section .work-container .work .tech-container .php {
+  background: #b3bee7;
+}
+
+#about-section {
+  height: 100vh;
+  width: 100vw;
 }
 
 #about-section .main-container {
@@ -458,6 +461,8 @@ ul a {
 #contact-section {
   font-family: "Taviraj", serif;
   position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 #contact-section .coming-soon-notice {
@@ -529,6 +534,11 @@ ul a {
   margin: 0;
 }
 
+#contact-section form .name-mail-container div input {
+  padding: 0px 0;
+  font-weight: bold;
+}
+
 #contact-section form .textarea-container {
   width: 100%;
 }
@@ -538,8 +548,24 @@ ul a {
   height: 14rem;
 }
 
+#contact-section form .form-alert {
+  color: #f83715;
+  font-size: 1.1rem;
+}
+
+#contact-section form .input-font-size {
+  font-size: 1.15rem;
+  font-family: "Taviraj", serif;
+}
+
 #contact-section footer {
   text-align: center;
+}
+
+.form-btn {
+  background-color: #ffffff;
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
 }
 
 .fade-in {

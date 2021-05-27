@@ -48,7 +48,7 @@
             <p><?php echo htmlspecialchars($post["name"]); ?></p>
           </div>
           <div>
-            <label for="email">E-mail</label><br />
+            <label for="email">E-mail:</label><br />
             <p><?php echo htmlspecialchars($post["email"]); ?></p>
           </div>
         </div>
@@ -60,7 +60,6 @@
         <button type="submit">Send</button>
       </form>
       <footer>
-        <?php echo 3+2-1 ?>
         <span>&copy; 2021 Miyabi Tanimichi</span>
       </footer>
     </div>

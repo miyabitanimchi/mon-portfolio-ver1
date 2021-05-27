@@ -1,0 +1,39 @@
+// fade-in animation
+.fade-in {
+  opacity: 0;
+  transition-duration: 1.2s;
+  transition-property: opacity transform;
+}
+.fade-in-up {
+  transform: translate(0 50px);
+}
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// media query
+@media screen and (min-width: 1150px) {
+  #work-section {
+    height: 100vh;
+  }
+}
+
+// fade-in animation added by js for img on about me page
+.fade-in-animation {
+  animation: fadeInImg 3.5s infinite;
+  @keyframes fadeInImg {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

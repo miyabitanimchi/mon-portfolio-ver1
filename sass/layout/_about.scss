@@ -1,0 +1,58 @@
+#about-section {
+  @include basic-size;
+  .main-container {
+    @include basic-display-list;
+    h1 {
+      text-align: center;
+      font-family: $themeFont;
+      font-size: 2.5rem;
+      padding-top: 1.5rem;
+    }
+    h3 {
+      font-family: $themeFont;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: rgb(77, 79, 82);
+    }
+    .aboutme-container {
+      @include disply-list-aligncenter;
+      justify-content: space-between;
+      height: 75vh;
+      border: solid rgba(155, 156, 158, 0.3);
+      border-width: 0 1px;
+      .what-i-love-container {
+        @include basic-display-list;
+        align-items: center;
+        overflow: hidden;
+        width: 50%;
+        height: 90vh;
+        img {
+          align-self: center;
+          width: 80%;
+          height: 50%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
+        #caption-for-img {
+          font-family: $themeFont;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+      .aboutme-text-container {
+        width: 40%;
+        margin: 0 auto;
+        text-align: justify;
+      }
+    }
+    #resume {
+      border: 1px solid rgba(102, 100, 100, 0.9);
+      border-radius: 5px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+}

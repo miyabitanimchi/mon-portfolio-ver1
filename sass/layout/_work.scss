@@ -1,0 +1,76 @@
+#work-section {
+  height: 140vh !important;
+
+  h1 {
+    text-align: center;
+    font-family: $themeFont;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .work-container {
+    display: flex;
+    flex-direction: column;
+    font-family: $themeFont;
+    .work-row1,
+    .work-row2 {
+      @include disply-list-aligncenter;
+      justify-content: space-between;
+      margin: 1rem 0;
+    }
+    .work {
+      @include basic-display-list;
+      width: 450px;
+      height: 350px;
+      background: rgba(245, 245, 245, 0.5);
+      margin: 2rem;
+      border-radius: 15px;
+      padding: 0.8rem;
+
+      p {
+        margin-bottom: 10px;
+        color: #000000;
+        font-weight: bolder;
+        font-size: 1.3rem;
+      }
+
+      img {
+        align-self: center;
+        width: 100%;
+        height: 80%;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+      .tech-container {
+        display: flex;
+        margin-top: 0.5rem;
+
+        .tech {
+          border-radius: 5px;
+          padding: 0 3px;
+          margin-right: 0.2rem;
+          color: #000000;
+          font-weight: bold;
+        }
+        .html {
+          background: rgb(248, 174, 171);
+        }
+        .css {
+          background: rgb(206, 221, 250);
+        }
+        .sass {
+          background: rgb(250, 197, 214);
+        }
+        .js {
+          background: rgb(245, 232, 177);
+        }
+        .bootstrap {
+          background: rgb(223, 205, 247);
+        }
+        .php {
+          background: rgb(179, 190, 231);
+        }
+      }
+    }
+  }
+}

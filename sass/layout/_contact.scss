@@ -1,0 +1,81 @@
+#contact-section {
+  font-family: $themeFont;
+  position: relative;
+  @include basic-size;
+  .coming-soon-notice {
+    position: absolute;
+    background: rgba(241, 240, 240, 0.8);
+    width: 40%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      width: 50%;
+      margin: 0 auto;
+      font-size: 1.5rem;
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+  }
+  form {
+    @include basic-display-list;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    .name-mail-container {
+      @include disply-list-aligncenter;
+      width: 100%;
+      justify-content: center;
+      padding-bottom: 1rem;
+      input {
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem 0;
+      }
+
+      div {
+        width: 100%;
+        margin: 0;
+
+        input {
+          padding: 0px 0;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .textarea-container {
+      width: 100%;
+      textarea {
+        width: 100%;
+        height: 14rem;
+      }
+    }
+    .form-alert {
+      color: rgb(248, 55, 21);
+      font-size: 1.1rem;
+    }
+    .input-font-size {
+      font-size: 1.15rem;
+      font-family: $themeFont;
+    }
+  }
+  footer {
+    text-align: center;
+  }
+}
+
+.form-btn {
+  background-color: #ffffff;
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+}

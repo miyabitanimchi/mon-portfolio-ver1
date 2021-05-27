@@ -1,3 +1,7 @@
-@import './base';
-@import './components';
-@import './layout';
+@import "./base/base";
+@import "./layout/navbar-links";
+@import "./layout/home";
+@import "./layout/work";
+@import "./layout/about";
+@import "./layout/contact";
+@import "./utility/animation";

@@ -154,6 +154,7 @@
                   <div class="tech html">HTML</div>
                   <div class="tech sass">Sass</div>
                   <div class="tech js">JavaScript</div>
+                  <div class="tech php">PHP</div>
                 </div>
               </div>
               <div class="work fade-in fade-in-up open" data-value="5">
@@ -238,27 +239,27 @@
               <div>
                 <label for="name">Name: </label><br />
                 <!-- htmlspecialchars... 項目未入力時に既に入力したものが消えないようにする -->
-                <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($post["name"]); ?>" required/>
+                <input class="input-font-size" type="text" name="name" id="name" value="<?php echo htmlspecialchars($post["name"]); ?>" required/>
                 <?php if ($error["name"] === "blank"): ?>
-                  <p>*Input your name</p>
+                  <p class="form-alert">*Input your name</p>
                 <?php endif; ?>
               </div>
               <div>
                 <label for="email">E-mail</label><br />
-                <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($post["email"]); ?>"/>
+                <input class="input-font-size" type="email" name="email" id="email" value="<?php echo htmlspecialchars($post["email"]); ?>"/>
                 <?php if ($error["email"] === "blank"): ?>
-                  <p>*Input your e-mail</p>
+                  <p class="form-alert">*Input your e-mail</p>
                 <?php endif; ?>
               </div>
             </div>
             <div class="textarea-container">
               <label for="message" class="label-message">Message: </label><br />
-              <textarea id="message" name="message" ><?php echo htmlspecialchars($post["message"]); ?></textarea>
+              <textarea class="input-font-size" id="message" name="message" ><?php echo htmlspecialchars($post["message"]); ?></textarea>
               <?php if ($error["message"] === "blank"): ?>
-                  <p>*Input your message</p>
+                  <p class="form-alert">*Input your message</p>
                 <?php endif; ?>
             </div>
-            <input type="submit" value="Confirm" />
+            <button type="submit" class="form-btn">Confirm</button>
           </form>
 
           <footer>
