@@ -95,6 +95,10 @@ open.forEach((workEl) => {
         viewApplicationBtn.href =
           "https://miyabitanimchi.github.io/mon-portfolio-ver1/";
         break;
+      case "5":
+        viewApplicationBtn.href =
+          "https://github.com/miyabitanimchi/ciccc-react-midterm-team-project";
+        break;
       default:
         viewApplicationBtn.href = "#";
     }

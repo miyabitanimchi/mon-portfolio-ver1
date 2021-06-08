@@ -360,6 +360,10 @@ ul a {
   background: #b3bee7;
 }
 
+#work-section .work-container .work .tech-container .react-js {
+  background: #7bdbf3;
+}
+
 #about-section {
   height: 100vh;
   width: 100vw;

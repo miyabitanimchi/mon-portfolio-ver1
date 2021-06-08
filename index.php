@@ -106,7 +106,7 @@
         <section id="modal" class="hidden-modal">
           <p>Details... Coming Soon!</p>
           <div class="link-to-app">
-            <a href="#" id="viewApplicationBtn">View Application</a>
+            <a href="#" id="viewApplicationBtn" target=”_blank”>View Application</a>
           </div>
           <div id="close">Close</div>
         </section>
@@ -158,11 +158,15 @@
                 </div>
               </div>
               <div class="work fade-in fade-in-up open" data-value="5">
-                <p>Coming soon!</p>
+                <p>React E-commerce Site</p>
                 <img
-                  src="https://images.unsplash.com/photo-1506102383123-c8ef1e872756?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-                  alt="flappy buddy"
+                  src="./img/react-ecommerce-site.png"
+                  alt="React E-commerce Site"
                 />
+                <div class="tech-container">
+                  <div class="tech react-js">React.js</div>
+                  <div class="tech sass">Sass</div>
+                </div>
               </div>
               <div class="work fade-in fade-in-up open" data-value="6">
                 <p>Coming soon!</p>
@@ -223,7 +227,7 @@
             </div>
           </div>
           <a
-            href="./img/MiaMiyabi_Tanimichi_Resume.pdf"
+            href="./img/resume_Miyabi_T_210607.pdf"
             download="miyabiT-resume.pdf"
             id="resume"
             class="fade-in"
