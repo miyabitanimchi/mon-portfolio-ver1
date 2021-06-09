@@ -61,7 +61,6 @@
         text-align: justify;
         @include mq-down("xl") {
           font-size: 0.9rem;
-          color: salmon;
         }
         @include mq-down("lg") {
           width: 80%;
