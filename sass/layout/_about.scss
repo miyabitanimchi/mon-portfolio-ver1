@@ -1,5 +1,8 @@
 #about-section {
   @include basic-size;
+  @include mq-down("lg") {
+    height: 170vh;
+  }
   .main-container {
     @include basic-display-list;
     h1 {
@@ -20,18 +23,30 @@
       height: 75vh;
       border: solid rgba(155, 156, 158, 0.3);
       border-width: 0 1px;
+      @include mq-down("lg") {
+        flex-direction: column-reverse;
+        height: auto;
+      }
+
       .what-i-love-container {
         @include basic-display-list;
         align-items: center;
         overflow: hidden;
         width: 50%;
         height: 90vh;
+        @include mq-down("lg") {
+          width: 80%;
+        }
+
         img {
           align-self: center;
           width: 80%;
           height: 50%;
           object-fit: cover;
           border-radius: 10px;
+          @include mq-down("lg") {
+            height: 60%;
+          }
         }
 
         #caption-for-img {
@@ -44,6 +59,14 @@
         width: 40%;
         margin: 0 auto;
         text-align: justify;
+        @include mq-down("xl") {
+          font-size: 0.9rem;
+          color: salmon;
+        }
+        @include mq-down("lg") {
+          width: 80%;
+          height: 40%;
+        }
       }
     }
     #resume {

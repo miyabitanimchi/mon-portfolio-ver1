@@ -1,0 +1,16 @@
+$sizes: xl, lg, md, sm, xs;
+
+$breakpoint-down: (
+  "xs": "screen and (max-width: 350px)",
+  "sm": "screen and (max-width: 450px)",
+  "md": "screen and (max-width: 650px)",
+  "lg": "screen and (max-width: 960px)",
+  "xl": "screen and (max-width: 1200px)",
+);
+
+//initial value: md
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}

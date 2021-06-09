@@ -1,5 +1,14 @@
 #work-section {
-  height: 140vh !important;
+  height: 130vh !important;
+  @include mq-down("xl") {
+    height: 120vh !important;
+  }
+  @include mq-down("lg") {
+    height: 420vh !important;
+  }
+  @include mq-down("md") {
+    height: 300vh !important;
+  }
 
   h1 {
     text-align: center;
@@ -17,62 +26,99 @@
       @include disply-list-aligncenter;
       justify-content: space-between;
       margin: 1rem 0;
+      @include mq-down("lg") {
+        flex-direction: column;
+      }
     }
-    .work {
-      @include basic-display-list;
-      width: 450px;
-      height: 350px;
-      background: rgba(245, 245, 245, 0.5);
-      margin: 2rem;
+  }
+
+  .work {
+    @include basic-display-list;
+    width: 450px;
+    height: 350px;
+    background: rgba(245, 245, 245, 0.5);
+
+    margin: 1.5rem;
+    border-radius: 15px;
+    padding: 0.5rem;
+    @include mq-down("xl") {
+      flex-direction: column;
+      width: 400px;
+      height: 265px;
+    }
+    @include mq-down("lg") {
+      width: 500px;
+      height: 390px;
+    }
+    @include mq-down("md") {
+      width: 370px;
+      height: 289px;
+    }
+    @include mq-down("sm") {
+      width: 300px;
+      height: 234px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: #000000;
+      font-weight: bolder;
+      font-size: 120%;
+      @include mq-down("md") {
+        font-size: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 80%;
       border-radius: 15px;
-      padding: 0.8rem;
+      object-fit: cover;
+    }
+    .tech-container {
+      display: flex;
+      margin-top: 0.5rem;
+      @include mq-down("md") {
+        margin-top: 0.2rem;
+      }
+      @include mq-down("sm") {
+        margin: 0;
+      }
 
-      p {
-        margin-bottom: 10px;
+      .tech {
+        border-radius: 5px;
+        padding: 0.1rem;
+        margin-right: 0.2rem;
         color: #000000;
-        font-weight: bolder;
-        font-size: 1.3rem;
+        font-weight: bold;
+        font-size: 95%;
+        @include mq-down("xl") {
+          font-size: 90%;
+        }
+        @include mq-down("sm") {
+          font-size: 70%;
+        }
       }
-
-      img {
-        align-self: center;
-        width: 100%;
-        height: 80%;
-        border-radius: 15px;
-        object-fit: cover;
+      .html {
+        background: rgb(248, 174, 171);
       }
-      .tech-container {
-        display: flex;
-        margin-top: 0.5rem;
-
-        .tech {
-          border-radius: 5px;
-          padding: 0 3px;
-          margin-right: 0.2rem;
-          color: #000000;
-          font-weight: bold;
-        }
-        .html {
-          background: rgb(248, 174, 171);
-        }
-        .css {
-          background: rgb(206, 221, 250);
-        }
-        .sass {
-          background: rgb(250, 197, 214);
-        }
-        .js {
-          background: rgb(245, 232, 177);
-        }
-        .bootstrap {
-          background: rgb(223, 205, 247);
-        }
-        .php {
-          background: rgb(179, 190, 231);
-        }
-        .react-js {
-          background: rgb(123, 219, 243);
-        }
+      .css {
+        background: rgb(206, 221, 250);
+      }
+      .sass {
+        background: rgb(250, 197, 214);
+      }
+      .js {
+        background: rgb(245, 232, 177);
+      }
+      .bootstrap {
+        background: rgb(223, 205, 247);
+      }
+      .php {
+        background: rgb(179, 190, 231);
+      }
+      .react-js {
+        background: rgb(123, 219, 243);
       }
     }
   }

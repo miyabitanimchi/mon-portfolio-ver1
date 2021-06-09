@@ -7,19 +7,41 @@
     height: 100vh;
     @include disply-list-aligncenter;
     justify-content: space-evenly;
+    @include mq-down("md") {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
 
     .introduction {
       align-self: center;
       font-size: 3rem;
       font-family: $themeFont;
       font-weight: bold;
+      width: 40%;
+      margin: 0 auto;
+      @include mq-down("lg") {
+        font-size: 2.3rem;
+      }
+      @include mq-down("md") {
+        font-size: 1.6rem;
+        width: 80%;
+        align-self: center;
+      }
     }
     .img-blur {
       align-self: center;
       position: relative;
-      height: 85%;
-      width: 50%;
+      height: 75%;
+      width: 45%;
+      margin: 0 auto;
       z-index: 0;
+      @include mq-down("lg") {
+        height: 60%;
+      }
+      @include mq-down("md") {
+        height: 50%;
+        width: 70%;
+      }
 
       &::after {
         position: absolute;
@@ -54,4 +76,8 @@
     border-radius: 10px;
     padding: 8px 12px;
   }
+}
+
+@include mq-down("md") {
+  flex-direction: column-reverse;
 }
