@@ -77,7 +77,7 @@
           ></a>
         </li>
         <li>
-          <a href="mailto:mmyybb.mm@gmail.com" tarrget="_blank"
+          <a href="mailto:miyabitanimichi@gmail.com" tarrget="_blank"
             ><i class="far fa-envelope"></i
           ></a>
         </li>
