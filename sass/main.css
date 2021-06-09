@@ -623,7 +623,6 @@ ul a {
 @media screen and (max-width: 1200px) {
   #about-section .main-container .aboutme-container .aboutme-text-container {
     font-size: 0.9rem;
-    color: salmon;
   }
 }
 
