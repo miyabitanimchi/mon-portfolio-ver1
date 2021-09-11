@@ -166,6 +166,8 @@
                 <div class="tech-container">
                   <div class="tech react-js">React.js</div>
                   <div class="tech sass">Sass</div>
+                  <div class="tech material-ui">Material UI</div>
+                  <div class="tech firebase">Firebase</div>
                 </div>
               </div>
               <div class="work fade-in fade-in-up open" data-value="6">
