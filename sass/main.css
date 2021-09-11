@@ -503,6 +503,14 @@ ul a {
   background: #7bdbf3;
 }
 
+#work-section .work .tech-container .firebase {
+  background: #ffca26;
+}
+
+#work-section .work .tech-container .material-ui {
+  background: #00b0fe;
+}
+
 #about-section {
   height: 100vh;
   width: 100vw;

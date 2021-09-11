@@ -169,11 +169,16 @@
                 </div>
               </div>
               <div class="work fade-in fade-in-up open" data-value="6">
-                <p>Coming soon!</p>
+                <p>Copy of Instagram</p>
                 <img
-                  src="https://images.unsplash.com/photo-1506102383123-c8ef1e872756?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-                  alt="flappy buddy"
+                  src="./img/ishigram.png"
+                  alt="Ishigram"
                 />
+                <div class="tech-container">
+                  <div class="tech react-js">React.js</div>
+                  <div class="tech css">CSS</div>
+                  <div class="tech material-ui">Material UI</div>
+                </div>
               </div>
             </div>
           </div>
