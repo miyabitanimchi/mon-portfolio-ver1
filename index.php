@@ -168,6 +168,7 @@
                   <div class="tech sass">Sass</div>
                   <div class="tech material-ui">Material UI</div>
                   <div class="tech firebase">Firebase</div>
+                  <div class="tech heroku">Heroku</div>
                 </div>
               </div>
               <div class="work fade-in fade-in-up open" data-value="6">
@@ -180,6 +181,7 @@
                   <div class="tech react-js">React.js</div>
                   <div class="tech css">CSS</div>
                   <div class="tech material-ui">Material UI</div>
+                  <div class="tech heroku">Heroku</div>
                 </div>
               </div>
             </div>
@@ -228,7 +230,7 @@
                 <h3>Skills</h3>
                 <p>
                   HTML5, CSS3, Sass, JavaScript, jQuery, Git, Bootstrap,
-                  React.js(currently learnig passionately)
+                  React.js, Node.js, Express, Firebase, Heroku, PHP
                 </p>
               </div>
             </div>

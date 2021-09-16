@@ -511,6 +511,10 @@ ul a {
   background: #59c6f5;
 }
 
+#work-section .work .tech-container .heroku {
+  background: #c4a1e7;
+}
+
 #about-section {
   height: 100vh;
   width: 100vw;

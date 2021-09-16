@@ -93,14 +93,14 @@ open.forEach((workEl) => {
         break;
       case "4":
         viewApplicationBtn.href =
-          "https://miyabitanimchi.github.io/mon-portfolio-ver1/";
+          "https://github.com/miyabitanimchi/mon-portfolio-ver1";
         break;
       case "5":
         viewApplicationBtn.href =
-          "https://github.com/miyabitanimchi/ciccc-react-midterm-team-project";
+          "https://github.com/miyabitanimchi/React-E-Commerce-App";
         break;
       default:
-        viewApplicationBtn.href = "#";
+        viewApplicationBtn.href = "https://github.com/BlackStone8960/Ishigram";
     }
   });
 });
