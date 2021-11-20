@@ -34,6 +34,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- for thumbnail -->
     <meta name="description" content="mia_miyabi_tanimichi" />
     <meta name="title" property="og:title" content="mia_miyabi_tanimichi" />
     <meta property="og:type" content="mia_miyabi_tanimichi" />
@@ -201,7 +202,7 @@
               <p id="caption-for-img" class="faded-in">test</p>
               <img
                 class="faded-in"
-                src="https://2.bp.blogspot.com/-VA8DS8XXYKw/WLEurNb7xVI/AAAAAAABCF4/8oFo3A3VlYkQWi6YV3AhaYh8ndqn_bPtgCLcB/s800/computer07_woman.png"
+                src="https://live.staticflickr.com/65535/51692380913_b244621829_z.jpg"
                 alt="Me coding"
                 id="slideImg"
                 class="slider"
