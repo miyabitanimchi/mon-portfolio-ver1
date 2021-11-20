@@ -39,7 +39,7 @@ ul a {
           transform-origin: left top;
   -webkit-transform: rotate(-90deg) translateX(-100%);
           transform: rotate(-90deg) translateX(-100%);
-  font-family: "Unna", serif;
+  font-family: 'Unna', serif;
   z-index: 99;
 }
 
@@ -50,8 +50,6 @@ ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -232,6 +230,12 @@ ul a {
   }
 }
 
+@media screen and (max-width: 450px) {
+  #home-section .introduction-container .introduction {
+    font-size: 1.4rem;
+  }
+}
+
 #home-section .introduction-container .img-blur {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -258,7 +262,7 @@ ul a {
 
 #home-section .introduction-container .img-blur::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   bottom: 0;
   left: 0;
@@ -661,23 +665,6 @@ ul a {
   width: 100vw;
 }
 
-#contact-section .coming-soon-notice {
-  position: absolute;
-  background: rgba(241, 240, 240, 0.8);
-  width: 40%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-#contact-section .coming-soon-notice p {
-  width: 50%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-}
-
 #contact-section h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -717,6 +704,15 @@ ul a {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  #contact-section form .name-mail-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #contact-section form .name-mail-container input {

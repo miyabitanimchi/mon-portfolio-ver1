@@ -34,6 +34,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="mia_miyabi_tanimichi" />
+    <meta name="title" property="og:title" content="mia_miyabi_tanimichi" />
+    <meta property="og:type" content="mia_miyabi_tanimichi" />
+    <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/51692380913_b244621829_z.jpg" />
+    <meta name="description" property="og:description" content="mia_miyabi_tanimichi" /><meta name="author" content="mia_miyabi_tanimichi" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
